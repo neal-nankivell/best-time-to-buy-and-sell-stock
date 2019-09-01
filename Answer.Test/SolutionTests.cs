@@ -3,7 +3,7 @@ using Answer;
 
 namespace Tests
 {
-    public class Tests
+    public class SolutionTests
     {
         [TestCase(7, 1, 5, 3, 6, 4, ExpectedResult = 5)]
         [TestCase(7, 6, 4, 3, 1, ExpectedResult = 0)]

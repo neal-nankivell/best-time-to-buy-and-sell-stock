@@ -18,19 +18,22 @@ namespace Answer
         {
             int maxProfit = 0;
 
-            for (int i = 0; i < prices.Length; i++)
+            int bestBuyPrice = prices[0];
+
+            for (int i = 1; i < prices.Length; i++)
             {
-                var buyPrice = prices[i];
-                for (int j = i + 1; j < prices.Length; j++)
+                int sellPrice = prices[i];
+
+                int profit = sellPrice - bestBuyPrice;
+
+                if (profit > maxProfit)
                 {
-                    var sellPrice = prices[j];
+                    maxProfit = profit;
+                }
 
-                    var profit = sellPrice - buyPrice;
-
-                    if (profit > maxProfit)
-                    {
-                        maxProfit = profit;
-                    }
+                if (sellPrice < bestBuyPrice)
+                {
+                    bestBuyPrice = sellPrice;
                 }
             }
 

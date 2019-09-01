@@ -16,7 +16,25 @@ namespace Answer
          */
         public int MaxProfit(int[] prices)
         {
-            throw new NotImplementedException();
+            int maxProfit = 0;
+
+            for (int i = 0; i < prices.Length; i++)
+            {
+                var buyPrice = prices[i];
+                for (int j = i + 1; j < prices.Length; j++)
+                {
+                    var sellPrice = prices[j];
+
+                    var profit = sellPrice - buyPrice;
+
+                    if (profit > maxProfit)
+                    {
+                        maxProfit = profit;
+                    }
+                }
+            }
+
+            return maxProfit;
         }
     }
 }

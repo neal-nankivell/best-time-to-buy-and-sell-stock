@@ -16,6 +16,11 @@ namespace Answer
          */
         public int MaxProfit(int[] prices)
         {
+            if (prices == null || prices.Length < 2)
+            {
+                return 0;
+            }
+
             int maxProfit = 0;
 
             int bestBuyPrice = prices[0];

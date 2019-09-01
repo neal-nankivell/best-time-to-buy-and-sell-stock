@@ -2,7 +2,11 @@
 
 namespace Answer
 {
-    public class Class1
+    public class Solution
     {
+        public int MaxProfit(int[] prices)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
